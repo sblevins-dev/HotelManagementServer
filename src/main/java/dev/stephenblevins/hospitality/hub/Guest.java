@@ -1,5 +1,6 @@
 package dev.stephenblevins.hospitality.hub;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,10 +18,14 @@ public class Guest {
 
     @Id
     private ObjectId id;
-    private String fName;
-    private String lName;
+    private String firstName;
+    private String lastName;
     private String roomNum;
     private Integer additionalGuests;
     LocalDateTime checkIn;
     LocalDateTime checkOut;
+
+//    public String getId() {
+//        return id.toString();
+//    }
 }
