@@ -30,14 +30,6 @@ public class GuestController {
         return new ResponseEntity<>(guestService.singleGuest(id), HttpStatus.OK);
     }
 
-//    private ObjectId id;
-//    private String fName;
-//    private String lName;
-//    private String roomNum;
-//    private Integer additionalGuests;
-//    LocalDateTime checkIn;
-//    LocalDateTime checkOut;
-
     @PostMapping
     public ResponseEntity<Guest> createGuest(@RequestBody Guest guest) {
         log.info("Creating guest: " + guest);
